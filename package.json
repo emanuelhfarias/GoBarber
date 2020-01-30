@@ -1,0 +1,11 @@
+{
+  "name": "bootcamp-gostack-gobarber",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:emanuelhfarias/bootcamp-gostack-gobarber.git",
+  "author": "Emanuel",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
