@@ -11,7 +11,7 @@ class AppointmentController {
     const tamanhoPagina = 20;
 
     const appointments = await Appointment.findAll({
-      where: { user_id: req.userId },
+      where: { user_id: req.userId, canceled_at: null },
       order: ['date'],
       attributes: ['id', 'date'],
       limit: tamanhoPagina,
