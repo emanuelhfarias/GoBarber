@@ -80,6 +80,12 @@ class AppointmentController {
       date: hourStart,
     });
 
+    if (req.userId === provider_id) {
+      return res.status(400).json({
+        error: 'Impossible to schedule an appointment with yourself.',
+      });
+    }
+
     // Notify appointment
     const user = await User.findByPk(req.userId);
     const formattedDate = format(
