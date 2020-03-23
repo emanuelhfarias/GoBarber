@@ -18,32 +18,32 @@ GoBarber é um projeto desenvolvido durante o Bootcamp GoStack#10 da RocketSeat.
 * Autenticação (JWT) de clientes e prestadores de serviços.
 * Upload de avatar
 
-### Instalando Dependências
+### 1) Instalando Dependências
 ```sh
 git clone ...
 cd GoBarber
 yarn
 ```
 
-### Subindo dependências com Docker
+### 2) Variáveis de ambiente
+```
+cp .env.example .env
+```
+
+### 3) Subindo dependências com Docker
 Sobe Postgres, Mongo, Redis e BeeQueue
 ```sh
 mkdir db
 sh dependencies.sh
 ```
 
-### Rodando migração e criando usuário Admin
+### 4) Rodando migração e criando usuário Admin
 ```sh
 yarn sequelize db:migrate
 yarn sequelize db:seed:all
 ```
 
-### Variáveis de ambiente
-```
-cp .env.example .env
-```
-
-### Subindo a aplicação
+### 5) Subindo a aplicação
 ```sh
 yarn dev
 ```
