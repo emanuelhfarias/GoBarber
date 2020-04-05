@@ -7,8 +7,12 @@ import logo from '../../assets/logo.svg';
 
 const schema = Yup.object().shape({
   name: Yup.string().required('O nome é obrigatório'),
-  email: Yup.string().email('Insira um email válido.').required('email obrigatório'),
-  password: Yup.string().min(6, 'Mínimo 6 caracteres').required('senha obrigatória'),
+  email: Yup.string()
+    .email('Insira um email válido.')
+    .required('email obrigatório'),
+  password: Yup.string()
+    .min(6, 'Mínimo 6 caracteres')
+    .required('senha obrigatória'),
 });
 
 export default function SignUp() {
@@ -16,16 +20,18 @@ export default function SignUp() {
     console.log(data);
   }
 
-  return <>
-    <img src={logo} alt="GoBarber" />
+  return (
+    <>
+      <img src={logo} alt="GoBarber" />
 
-    <Form schema={schema} onSubmit={handleSubmit}>
-      <Input name="name" type="text" placeholder="Nome completo"  />
-      <Input name="email" type="email" placeholder="Seu e-mail"  />
-      <Input name="password" type="password" placeholder="Senha"  />
+      <Form schema={schema} onSubmit={handleSubmit}>
+        <Input name="name" type="text" placeholder="Nome completo" />
+        <Input name="email" type="email" placeholder="Seu e-mail" />
+        <Input name="password" type="password" placeholder="Senha" />
 
-      <button type="submit">Criar conta</button>
-      <Link to="/">Já tenho login</Link>
-    </Form>
-  </>;
+        <button type="submit">Criar conta</button>
+        <Link to="/">Já tenho login</Link>
+      </Form>
+    </>
+  );
 }
