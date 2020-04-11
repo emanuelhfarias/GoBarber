@@ -10,6 +10,13 @@
 ## Projeto
 GoBarber é um projeto desenvolvido durante o Bootcamp GoStack#10 da RocketSeat. Tem como objetivo a criação de uma aplicação para a gestão de um salão de beleza.
 
+## Screenshots
+<h1 align="center">
+  <h3>Web</h3>
+  <img alt="GoBarber" title="GoBarber" src=".github/login.png" height="400" />
+  <img alt="GoBarber" title="GoBarber" src=".github/agendamentos.png" height="400" />
+</h1>
+
 ### Algumas __features__
 * Agendamento de clientes com prestadores de serviços
 * Envio de email de cancelamento de um agendamento
