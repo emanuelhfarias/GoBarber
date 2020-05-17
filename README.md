@@ -16,6 +16,18 @@ GoBarber é um projeto desenvolvido durante o Bootcamp GoStack#10 da RocketSeat.
   <img src=".github/agendamentos.png" height="400px" />
 </h1>
 
+### Running
+
+```sh
+docker-compose up
+```
+
+Abra em seu navegador: `localhost:3000`  
+email: `barbeiro@teste.com`  
+senha: `123456`  
+
+Se preferir subir o projeto sem o docker-compose, siga o [tutorial da wiki](https://github.com/emanuelhfarias/GoBarber/wiki/Instala%C3%A7%C3%A3o).
+
 ### Algumas __features__
 * Agendamento de clientes com prestadores de serviços
 * Envio de email de cancelamento de um agendamento
@@ -23,36 +35,6 @@ GoBarber é um projeto desenvolvido durante o Bootcamp GoStack#10 da RocketSeat.
 * Horários disponíveis de um prestador de serviço.
 * Autenticação (JWT) de clientes e prestadores de serviços.
 * Upload de avatar
-
-### 1) Instalando Dependências
-```sh
-git clone ...
-cd GoBarber
-yarn
-```
-
-### 2) Variáveis de ambiente
-```
-cp .env.example .env
-```
-
-### 3) Subindo dependências com Docker
-Sobe Postgres, Mongo, Redis e BeeQueue
-```sh
-mkdir db
-sh dependencies.sh
-```
-
-### 4) Rodando migração e criando usuário Admin
-```sh
-yarn sequelize db:migrate
-yarn sequelize db:seed:all
-```
-
-### 5) Subindo a aplicação
-```sh
-yarn dev
-```
 
 ### Algumas tecnologias utilizadas:
 * Sistema de notificações com MongoDB

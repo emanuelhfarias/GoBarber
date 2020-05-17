@@ -1,0 +1,67 @@
+version: '3.7'
+
+services:
+  web:
+    container_name: dockerized-react-app
+    image: node:12.14.0-buster-slim
+    working_dir: /app
+    command: bash -c 'yarn && yarn start'
+    stdin_open: true
+    volumes:
+      - './web:/app'
+    ports:
+      - '3000:3000'
+    environment:
+      - NODE_ENV=development
+    depends_on: [backend]
+  backend:
+    container_name: dockerized-node-app
+    image: node:12.14.0-buster-slim
+    working_dir: /app
+    command: bash -c 'yarn && yarn dev'
+    stdin_open: true
+    ports:
+      - '3333:3333'
+    volumes:
+      - './backend:/app'
+    environment:
+      - NODE_ENV=development
+    depends_on: [worker]
+  worker:
+    container_name: dockerized-node-worker
+    image: node:12.14.0-buster-slim
+    working_dir: /app
+    command: bash -c 'yarn && yarn queue'
+    stdin_open: true
+    volumes:
+      - './backend:/app'
+    environment:
+      - NODE_ENV=development
+    depends_on: [db_seeding, mongo, redis]
+  db_seeding:
+    container_name: db-seeding
+    image: node:12.14.0-buster-slim
+    working_dir: /app
+    command: bash -c 'yarn && yarn sequelize db:create && yarn sequelize db:migrate && yarn sequelize db:seed:all'
+    volumes:
+      - './backend:/app'
+    environment:
+      - NODE_ENV=development
+    depends_on: [db]
+  db:
+    image: postgres:11.4
+    volumes:
+      - './db:/var/lib/postgresql/data'
+    ports:
+      - "5433:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+  mongo:
+    image: mongo:4.2.6
+    ports:
+      - "27017:27017"
+  redis:
+    image: redis:alpine
+    ports:
+    - "6379:6379"
