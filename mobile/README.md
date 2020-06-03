@@ -16,3 +16,4 @@ $ react-native start
 ```
 
 Now you should see device connected on Reactotron
+REF: https://github.com/infinitered/reactotron/blob/master/docs/quick-start-react-native.md
