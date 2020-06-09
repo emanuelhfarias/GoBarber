@@ -7,8 +7,6 @@ import Icon from 'react-native-vector-icons/MaterialIcons';
 import { Container, Left, Avatar, Info, Name, Time } from './styles';
 
 export default function Appointment({ data, onCancel }) {
-  console.tron.log(data.provider.avatar.url);
-
   const dateParsed = useMemo(() => {
     return formatRelative(parseISO(data.date), new Date(), {
       lacale: pt,
@@ -22,7 +20,7 @@ export default function Appointment({ data, onCancel }) {
         <Avatar
           source={{
             uri: data.provider.avatar
-              ? data.provider.avatar.url
+              ? data.provider.avatar.url.replace('localhost', '10.0.2.2')
               : `https://api.adorable.io/avatar/50/${data.provider.name}.png`,
           }}
         />
