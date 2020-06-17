@@ -1,3 +1,10 @@
+Antes de subir o emulador de Android / iOS, tenha o backend rodando:
+```sh
+$ docker-compose up
+```
+
+Agora suba o Emulador Android / iOS e depois rode os seguintes comandos:
+
 ```sh
 yarn
 react-native start
