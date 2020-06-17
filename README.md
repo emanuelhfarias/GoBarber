@@ -12,9 +12,9 @@ GoBarber é um projeto desenvolvido durante o Bootcamp GoStack#10 da RocketSeat.
 
 ## Screenshots
 <h1 align="center">
-  <img src=".github/login.png" height="300px" />
+  <img src=".github/login.png" height="270px" />
   <img src=".github/agendamentos.png" height="300px" />
-  <img src=".github/mobile.png" height="238px" />
+  <img src=".github/mobile.png" height="268px" />
 </h1>
 
 ### Running
