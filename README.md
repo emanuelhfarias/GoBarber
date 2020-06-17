@@ -27,7 +27,9 @@ Abra em seu navegador: `localhost:3000`
 email: `barbeiro@teste.com`  
 senha: `123456`  
 
-Se preferir subir o projeto sem o docker-compose, siga o [tutorial da wiki](https://github.com/emanuelhfarias/GoBarber/wiki/Instala%C3%A7%C3%A3o).
+Se preferir subir o projeto sem o docker-compose, siga o [tutorial da wiki](https://github.com/emanuelhfarias/GoBarber/wiki/Instala%C3%A7%C3%A3o).  
+
+Para subir o aplicativo mobile, veja o [README do mobile](https://github.com/emanuelhfarias/GoBarber/tree/master/mobile).  
 
 ### Algumas __features__
 * Agendamento de clientes com prestadores de serviços
