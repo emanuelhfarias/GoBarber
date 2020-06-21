@@ -8,7 +8,7 @@
 </h3>
 
 ## Projeto
-GoBarber é um projeto desenvolvido durante o Bootcamp GoStack#10 da RocketSeat. Tem como objetivo a criação de uma aplicação para a gestão de um salão de beleza.
+GoBarber é um projeto desenvolvido durante o Bootcamp GoStack#10 da RocketSeat. Tem como objetivo a criação de uma aplicação para a gestão de um salão de beleza. Nesse projeto foram desenvolvidos uma API em Node, uma aplicação web em React e uma aplicativo Mobile em react-native.
 
 ## Screenshots
 <h1 align="center">
