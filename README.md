@@ -17,6 +17,10 @@ GoBarber é um projeto desenvolvido durante o Bootcamp GoStack#10 da RocketSeat.
   <img src=".github/mobile.png" height="268px" />
 </h1>
 
+<p align="center">
+  <a href="https://github.com/emanuelhfarias/FastFeet/blob/master/mobile/README.md">Mais fotos</a>
+</p>
+
 ### Running
 
 ```sh
