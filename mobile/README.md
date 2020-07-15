@@ -36,4 +36,6 @@ REF: https://github.com/infinitered/reactotron/blob/master/docs/quick-start-reac
   <img src="../.github/confirmacao.png" />
   <img src="../.github/perfil.png" />
   <img src="../.github/perfil2.png" />
+  <img src="../.github/meu_perfil_web.png" />
+  <img src="../.github/notificacoes_web.png" />
 </h1>
